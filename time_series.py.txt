@@ -1,6 +1,7 @@
 class TimeSeries(object):
     '''This is for storing time series data'''
     def __init__(self, data):
+        '''Find the corresponding y-value when given an x-value'''
         self.data = data
     
     def get(self, x):
