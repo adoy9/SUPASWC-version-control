@@ -1,4 +1,5 @@
 class TimeSeries(object):
+    '''This is for storing time series data'''
     def __init__(self, data):
         self.data = data
     
@@ -14,6 +15,7 @@ class TimeSeries(object):
     
 
 class StepFunctionTimeSeries(TimeSeries):
+    '''This is a class of data that allows for step interpolation of time series data'''
     def get(self, x):
         '''Given an X value, get the corresponding Y value.
         
@@ -32,6 +34,7 @@ class StepFunctionTimeSeries(TimeSeries):
 
 
 class LinearTimeSeries(TimeSeries):
+    '''This is a class that allows for linear interpolation of time series data'''
     def __init__(self, data):
         TimeSeries.__init__(self, data)
         self.data.sort()
